@@ -1,0 +1,28 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/invoice
+    username: root
+    password: admin
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
+    enabled: true
+  mvc:
+    static-path-pattern: /**
+
+#指定mybatis映射文件地址
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.yhw.mapper
+
+
+
+
